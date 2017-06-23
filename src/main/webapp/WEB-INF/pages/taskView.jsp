@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Список заданий</title>
+    <title>TODO list</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/resources/main.css">
@@ -29,7 +29,11 @@
             </div>
 
             <c:if test="${empty tasksList}">
-                Задания отсутствуют.
+                <h3 class="panel-title">
+                    <div align="center">
+                        Задания отсутствуют.
+                    </div>
+                </h3>
             </c:if>
             <c:if test="${not empty tasksList}">
                 <h3 class="panel-title">
@@ -50,8 +54,8 @@
                     <tr>
                         <th>Задача</th>
                         <th>Описание задачи</th>
-                        <th>Выполнить до</th>
                         <th>Готово</th>
+                        <th>Выполнить до</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -61,9 +65,9 @@
                         <tr>
                             <th><c:out value="${taskModel.name}"/></th>
                             <th><c:out value="${taskModel.description}"/></th>
-                            <th><fmt:formatDate value="${taskModel.schedule}" pattern="yyyy.MM.dd"/></th>
                             <th><c:if test="${taskModel.done}"><img src="/resources/done.png" width="32" height="32"/></c:if>
                                 <c:if test="${not taskModel.done}"><img src="/resources/undone.png" width="32" height="32"></c:if></th>
+                            <th><fmt:formatDate value="${taskModel.schedule}" pattern="dd MMMM yyyy"/></th>
                             <th><a href="editTask?id=<c:out value='${taskModel.id}'/>">Изменить</a> </th>
                             <th><a href="deleteTask?id=<c:out value='${taskModel.id}'/>">Удалить</a> </th>
                         </tr>

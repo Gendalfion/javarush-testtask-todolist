@@ -8,9 +8,6 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.util.List;
 
-/**
- * Created by wz on 01.03.17.
- */
 @Service
 @Transactional
 public class TaskService {

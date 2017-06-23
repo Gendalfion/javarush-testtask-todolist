@@ -10,9 +10,6 @@ import org.hibernate.SessionFactory;
 import java.io.Serializable;
 import java.util.List;
 
-/**
- * Created by wz on 01.03.17.
- */
 @Repository
 public class DbWorker {
 

@@ -4,15 +4,17 @@
 * Сборка проекта:<br />
     Найти корень проекта (с файлом pom.xml);<br />
     Набрать: 'mvn install' (установка Maven: 'https://maven.apache.org/install.html');<br />
-    Результат успешной сборки: папка 'target' и собранные ресурсы и библиотеки;<br />
-    
+    Результат успешной сборки: папка 'target' + собранные ресурсы и библиотеки в ней;<br />
+<hr>
 * Запуск проекта:<br />
     Для запуска потребуется: <br />
-        1. сервер MySQL (гайд по запуску: https://dev.mysql.com/doc/mysql-getting-started/en/);<br />
+        * сервер MySQL (гайд по запуску: https://dev.mysql.com/doc/mysql-getting-started/en/);<br />
         настройки MySQL: user(root), password (root), port (3306), DataBase (test)<br />
-        2. сервер Apache Tomcat (http://tomcat.apache.org/download-90.cgi)<br />
-    Найти файл 'todoList.war' в папке 'target';<br />
-    Развернуть веб-приложение из сервера 'todoList.war' на сервере ApacheTomcat;<br />
-    Набрать в строке браузера: 'localhost:"port"', где "port" - это порт, на который настроен сервер (по-умолчанию 8080)<br />
+        * сервер Apache Tomcat (http://tomcat.apache.org/download-90.cgi)<br />
+<br />
+    Далее:<br />
+    Находим файл 'todoList.war' в папке 'target';<br />
+    Разворачиваем веб-приложение 'todoList.war' на сервере Apache Tomcat;<br />
+    Набираем в строке браузера: 'localhost:_port_', где _port_ - это порт, на который настроен сервер (по-умолчанию 8080)<br />
 
 

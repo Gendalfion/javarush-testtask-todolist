@@ -13,9 +13,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by wz on 01.03.17.
- */
 @Controller
 public class TaskController {
 
@@ -75,13 +72,14 @@ public class TaskController {
 
     @RequestMapping("addTestTasks")
     public ModelAndView addTestTasks(){
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 30; i++) {
             TaskModel taskModel = new TaskModel();
 
-            taskModel.setName("Test " + i);
-            taskModel.setDescription("Just for test.");
+            int taskNum = i+1;
+            taskModel.setName("Задача " + taskNum);
+            taskModel.setDescription("Описание задачи #" + taskNum);
             taskModel.setSchedule(new Date());
-            taskModel.setDone(Math.random() > 0.5);
+            taskModel.setDone(Math.random() < 0.5);
             taskService.createTask(taskModel);
         }
         return new ModelAndView("redirect:getAllTasks?done=all?page=1");

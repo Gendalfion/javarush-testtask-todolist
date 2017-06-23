@@ -6,9 +6,6 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * Created by wz on 01.03.17.
- */
 @Entity
 @Table(name = "Tasks")
 public class TaskModel implements Serializable {
