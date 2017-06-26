@@ -57,12 +57,15 @@
 
                 <div class="form-group">
                     <div class="row">
-                        <div class="col-xs-5">
+                        <div class="col-xs-2">
                         </div>
-                        <div class="col-xs-4">
+                        <div class="col-xs-5">
+                            <input type="submit" id="cancel" class="btn btn-primary" value="Отмена" onclick="history.go(-1); return false;"/>
+                        </div>
+                        <div class="col-xs-5">
                             <input type="submit" id="saveTask" class="btn btn-primary" value="Подтвердить изменения" onclick="return submitTaskForm();"/>
                         </div>
-                        <div class="col-xs-5">
+                        <div class="col-xs-2">
                         </div>
                     </div>
                 </div>

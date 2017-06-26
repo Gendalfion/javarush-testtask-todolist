@@ -20,9 +20,12 @@
         </div>
         <div class="panel-body">
             <div class="panel-heading" align="center">
+                <!--
+                Removing that link, since only SQL-script is needed:
                 <h3 class="panel-title" style="margin-top:25px;margin-bottom:25px;">
                     <a href="addTestTasks">Добавить тестовые данные в таблицу 'tasks'</a>
                 </h3>
+                -->
                 <h3 class="panel-title">
                     <a href="/createTask">Новая задача</a>
                 </h3>

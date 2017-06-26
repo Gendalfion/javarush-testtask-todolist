@@ -11,6 +11,7 @@
         * сервер MySQL (гайд по запуску: https://dev.mysql.com/doc/mysql-getting-started/en/);<br />
         настройки MySQL: user(root), password (root), port (3306), DataBase (test)<br />
         * сервер Apache Tomcat (http://tomcat.apache.org/download-90.cgi)<br />
+        * для создания таблицы и добавления в нее тестовых данных можно использовать скрипт 'createAndFillTable.sql' (в корне проекта)<br />
 <br />
     Далее:<br />
     Находим файл 'todoList.war' в папке 'target';<br />
