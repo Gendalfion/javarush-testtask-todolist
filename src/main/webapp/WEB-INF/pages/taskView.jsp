@@ -19,15 +19,20 @@
             </h3>
         </div>
         <div class="panel-body">
-            <div class="panel-heading" align="center">
+            <div class="panel-heading">
                 <!--
                 Removing that link, since only SQL-script is needed:
                 <h3 class="panel-title" style="margin-top:25px;margin-bottom:25px;">
-                    <a href="addTestTasks">Добавить тестовые данные в таблицу 'tasks'</a>
+                    <div align="center">
+                        <a href="addTestTasks">Добавить тестовые данные в таблицу 'tasks'</a>
+                    </div>
                 </h3>
                 -->
+
                 <h3 class="panel-title">
-                    <a href="/createTask">Новая задача</a>
+                    <div align="center">
+                        <a href="/createTask">Новая задача</a>
+                    </div>
                 </h3>
             </div>
 
@@ -93,10 +98,10 @@
 
                         <div class="col-xs-4">
                             <c:if test="${filter.equals('done')}">
-                                Только готовые
+                                Готовые
                             </c:if>
                             <c:if test="${!filter.equals('done')}">
-                                <a href="getAllTasks?done=done&page=1">Только готовые</a>
+                                <a href="getAllTasks?done=done&page=1">Готовые</a>
                             </c:if>
                         </div>
 

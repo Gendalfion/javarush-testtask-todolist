@@ -1,45 +1,21 @@
 package todolist.service;
 
-import todolist.dao.TaskDao;
 import todolist.model.TaskModel;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
 import java.util.List;
 
-@Service
-@Transactional
-public class TaskService {
+public interface TaskService {
+    long createTask(TaskModel taskModel);
 
-    @Autowired
-    private TaskDao taskDao;
+    TaskModel updateTask(TaskModel taskModel);
 
-    public long createTask(TaskModel taskModel){
-        return taskDao.createTask(taskModel);
-    }
+    void deleteTask(long id);
 
-    public TaskModel updateTask(TaskModel taskModel){
-        return taskDao.updateTask(taskModel);
-    }
+    List<TaskModel> getAllTasks();
 
-    public void deleteTask(long id){
-        taskDao.deleteTask(id);
-    }
+    int getSizeWithFilter(String filter);
 
-    public List<TaskModel> getAllTasks() {
-        return taskDao.getAllTasks();
-    }
+    List<TaskModel> getPageWithFilter(String filter, int offset, int pageSize);
 
-    public int getSizeWithFilter(String filter){
-        return taskDao.getSizeWithFilter(filter);
-    }
-
-    public List<TaskModel> getPageWithFilter(String filter, int offset, int pageSize){
-        return taskDao.getPageWithFilter(filter, offset, pageSize);
-    }
-
-    public TaskModel getTask(long id){
-        return taskDao.getTask(id);
-    }
+    TaskModel getTask(long id);
 }
